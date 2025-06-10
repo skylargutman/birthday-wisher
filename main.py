@@ -25,7 +25,7 @@ def format_letter(name):
         if os.path.isfile("letter_templates/" + dir_item):
             with open(f"letter_templates/{dir_item}") as lt:
                 letter_templates.append(lt.read())
-    return choice(letter_templates).replace("[Name]", name)
+    return choice(letter_templates).replace("[NAME]", name)
 
 
 def send_email(to,subject, message):
